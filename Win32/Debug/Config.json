@@ -1,0 +1,9 @@
+{
+"sistema":"sac",
+"endereco":"127.0.0.1",
+"base":"sac60",
+"porta":5432,
+"usuario":"sac",
+"senha":"sacd35269147",
+"condicoes":"019;004;008;010;002;064;017"
+}

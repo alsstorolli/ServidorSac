@@ -1,0 +1,11 @@
+Erro query: SQL Error: ERROR:  unterminated quoted string at or near "' order by clie_nome
+"
+LINE 1: select * from clientes where clie_nome<>' order by clie_nome
+                                                ^
+ERROR 42601
+unterminated quoted string at or near "' order by clie_nome
+"
+position: 41 
+Code: 7 SQL: select * from clientes where clie_nome<>' order by clie_nome
+
+Comando: select * from clientes where clie_nome<>' order by clie_nome

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/09 14:35:26.000.896,=C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/08/23 17:57:55.000.977,=C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/21 14:55:03.000.134,=C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/21 15:16:47.000.409,=C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/21 16:36:36.000.437,=C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/21 16:37:25.000.031,C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\ProjetosDelphi113\ServidorSac\Main.dfm</Transaction>
+    <Transaction>2024/08/21 16:37:25.000.031,C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\Main.pas</Transaction>
+    <Transaction>2024/08/21 16:37:46.000.150,C:\Users\Andre\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\ProjetosDelphi113\ServidorSac\ServidorSac.dproj</Transaction>
+    <Transaction>2024/08/22 10:54:44.000.440,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/08/22 10:55:03.000.366,C:\ProjetosDelphi113\ServidorSac\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\ControllerCadastros.pas</Transaction>
+    <Transaction>2024/08/22 11:39:25.000.561,=C:\ProjetosDelphi113\ServidorSac\ControllerConfiguracao.pas</Transaction>
+    <Transaction>2024/08/22 11:39:30.000.322,=C:\ProjetosDelphi113\ServidorSac\ClasseConfiguracao.pas</Transaction>
+    <Transaction>2024/08/22 11:50:00.000.375,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/08/22 11:50:11.000.891,C:\ProjetosDelphi113\ServidorSac\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\classeportadores.pas</Transaction>
+    <Transaction>2024/09/05 15:55:11.000.089,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/09/05 15:55:32.000.777,C:\ProjetosDelphi113\ServidorSac\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\classeclientes.pas</Transaction>
+    <Transaction>2024/12/13 10:00:05.000.528,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/12/13 10:00:24.000.202,C:\ProjetosDelphi113\ServidorSac\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\classeprodutos.pas</Transaction>
+    <Transaction>2024/12/13 11:36:58.000.226,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/12/13 11:37:12.000.476,C:\ProjetosDelphi113\ServidorSac\Unit1.pas=C:\ProjetosDelphi113\ServidorSac\classeprecos.pas</Transaction>
+    <Transaction>2024/12/19 15:26:06.000.212,=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+    <Transaction>2024/12/19 15:26:42.000.190,C:\ProjetosDelphi113\ServidorSac\classecondicao.pas=C:\ProjetosDelphi113\ServidorSac\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
