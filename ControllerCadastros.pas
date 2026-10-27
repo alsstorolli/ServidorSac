@@ -5,7 +5,7 @@ interface
 uses  ZConnection,seEnvironment,DalClass, sefuncoes,ControllerConfiguracao,
       classeportadores,djson,System.Generics.Collections,System.JSON,System.SysUtils,
       Horse, Horse.Jhonson,Data.DB,classeclientes,classeprodutos,
-      classecondicao;
+      classecondicao,System.classes;
 
 type TControllerCadastros=class(TInterfacedObject)
   private
@@ -184,12 +184,12 @@ begin
   fAmbiente:=TseEnvironment.Create(Nil);
   fAmbiente.Conexao:=TZConnection.Create(Nil);
   Ambiente.ExecutaProcessaMensagem:=False;
-  campos:='clie_codigo,clie_nome,clie_razaosocial,clie_cidade,clie_cnpjcpf';
+  campos:='clie_codigo,clie_nome,clie_razaosocial,clie_cidade,clie_cnpjcpf,clie_uf';
   if ConfiguraConexao(fAmbiente) then begin
 //    Query:=fAmbiente.IniciaQuery('select * from clientes where clie_nome<>'''' order by clie_nome');
     Query:=fAmbiente.IniciaQuery('select '+campos+' from clientes'+
            ' where length(clie_nome)>4'+
-           ' group by clie_nome,clie_codigo,clie_razaosocial,clie_cidade,clie_cnpjcpf'+
+           ' group by clie_nome,clie_codigo,clie_razaosocial,clie_cidade,clie_cnpjcpf,clie_uf'+
            ' order by clie_nome');
     if Query.IsEmpty then begin
       Json:=TJSONObject.Create;
@@ -340,12 +340,17 @@ var Query:TseQuery;
     Json:TJSONObject;
     fAmbiente:TseEnvironment;
     campos:string;
+    Lista:TStringList;
 begin
   fAmbiente:=TseEnvironment.Create(Nil);
   fAmbiente.Conexao:=TZConnection.Create(Nil);
   Ambiente.ExecutaProcessaMensagem:=False;
-  campos:='esto_codigo,esto_descricao,esto_unidade,esto_imagem,'+
+//  campos:='esto_codigo,esto_descricao,esto_unidade,esto_imagem,'+
+// 16.10.26 - inicio uso de imagens dai dá out of memory - retirado
+//            para ver como tratar isto...
+  campos:='esto_codigo,esto_descricao,esto_unidade,'+
           'esqt_qtde,esqt_vendavis,esto_desconto';
+  Lista:=TStringList.Create;
   if ConfiguraConexao(fAmbiente) then begin
     Query:=fAmbiente.IniciaQuery('select '+campos+' from estoque'+
            ' inner join estoqueqtde on ( esqt_esto_codigo=esto_codigo )'+
@@ -356,19 +361,24 @@ begin
       Json:=TJSONObject.Create;
       Json.AddPair('error','sem produtos');
       Result:=Json.ToString;
+      Lista.Add(Json.ToString);
       FreeAndNil(Json);
     end else begin
       Result:=Query.DataSetToJson('produtos');
+      Lista.Add(Result);
     end;
     Query.Close;
   end else begin
     Json:=TJSONObject.Create;
     Json.AddPair('error','nao foi possivel conectar ao servidor');
     Result:=Json.ToString;
+    Lista.Add(Json.ToString);
     FreeAndNil(Json);
   end;
   fAmbiente.Conexao.Disconnect;
+  Lista.SaveToFile('Log.txt');
   FreeAndNil(fAmbiente);
+  Lista.Clear;
 end;
 
 // 01.10.25

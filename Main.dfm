@@ -1,7 +1,7 @@
 object FMain: TFMain
   Left = 0
   Top = 0
-  Caption = 'Vers'#227'o 2.5'
+  Caption = 'Vers'#227'o 2.6'
   ClientHeight = 438
   ClientWidth = 632
   Color = clBtnFace
@@ -54,8 +54,8 @@ object FMain: TFMain
       item
         Width = 200
       end>
-    ExplicitTop = 415
-    ExplicitWidth = 626
+    ExplicitTop = 418
+    ExplicitWidth = 628
   end
   object TrayIcon1: TTrayIcon
     PopupMenu = PopupMenu1
